@@ -18,7 +18,7 @@ source env/bin/activate
 ```sh
 pip install -r requirements.txt
 ```
-Установка переменных окружения
+Установка переменных окружения:
 ```sh
 export HOST=localhost  # Ваш хост
 ```
