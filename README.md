@@ -11,7 +11,7 @@ cd shortener-flask/
 ````
 Зайдите в репо и создайте и активируйте виртуальную среду:
 ```sh
-python -m venv env
+python3 -m venv env
 source env/bin/activate
 ```
 Установите используемые пакеты:
