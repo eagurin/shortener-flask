@@ -72,10 +72,11 @@ def url_redirect(shorten):
         return redirect(request["url"])
     return jsonify({"error": "Invalid URL"}), 404
 
+
 def create_app(foo):
     app = Flask(__name__)
-    app.config['foo'] = foo
-    print('Passed item: ', app.config['foo'])
+    app.config["foo"] = foo
+    print("Passed item: ", app.config["foo"])
     return app
 
 
