@@ -2,10 +2,9 @@ import random
 import string
 import unittest
 
-from app import app
+from app import app, hashed
 
 app.testing = True
-
 
 class BasicTestCase(unittest.TestCase):
     def setUp(self):
@@ -17,7 +16,7 @@ class BasicTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
 
     def test_create_custom_url(self):
-        shorten = "Test"
+        shorten = hashed()
         data = {"url": "https://google.com/", "shorten": shorten}
         response = self.app.post("/_short", json=data)
         self.assertEqual(response.status_code, 201)
