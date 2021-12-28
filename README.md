@@ -18,16 +18,10 @@ source env/bin/activate
 ```sh
 pip install -r requirements.txt
 ```
-Установка переменных окружения:
+Запуск локально:
 ```sh
-export HOST=localhost  # Ваш хост
-```
-Инициализация БД:
-```sh
+export HOST=localhost
 python init_db.py
-```
-Запуск репо локально:
-```sh
 python app.py
 ```
 Для сокращения ссылки использоваться метод:
