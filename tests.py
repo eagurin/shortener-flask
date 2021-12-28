@@ -7,13 +7,6 @@ from app import app
 app.testing = True
 
 
-def hashed():
-    let = string.ascii_uppercase + string.ascii_lowercase
-    dig = string.digits
-    hash = random.choices(let, k=1) + random.choices(let + dig, k=5)
-    return "".join(hash)
-
-
 class BasicTestCase(unittest.TestCase):
     def setUp(self):
         self.app = app.test_client()
@@ -24,7 +17,7 @@ class BasicTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 201)
 
     def test_create_custom_url(self):
-        shorten = hashed()
+        shorten = "Test"
         data = {"url": "https://google.com/", "shorten": shorten}
         response = self.app.post("/_short", json=data)
         self.assertEqual(response.status_code, 201)
