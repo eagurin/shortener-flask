@@ -49,10 +49,7 @@ def shorten():
     )
     conn.commit()
     conn.close()
-    return (
-        jsonify({"shorten": request.host_url + shorten}),
-        201,
-    )
+    return jsonify({"shorten": request.host_url + shorten}), 201
 
 
 @app.route("/<shorten>")
@@ -71,13 +68,6 @@ def url_redirect(shorten):
         conn.close()
         return redirect(request["url"])
     return jsonify({"error": "Invalid URL"}), 404
-
-
-def create_app(foo):
-    app = Flask(__name__)
-    app.config["foo"] = foo
-    print("Passed item: ", app.config["foo"])
-    return app
 
 
 if __name__ == "__main__":
