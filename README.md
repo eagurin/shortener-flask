@@ -22,13 +22,13 @@ pip install -r requirements.txt
 ```sh
 python init_db.py
 ```
-Запустить тесты:
-```sh
-python -m unittest discover -p tests.py
-```
 Установить хост:
 ```sh
 export HOST=localhost
+```
+Запустить тесты:
+```sh
+python -m unittest discover -p tests.py
 ```
 Запуск локально:
 ```sh
